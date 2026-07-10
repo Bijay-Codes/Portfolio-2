@@ -12,7 +12,7 @@ export function Hero() {
 
             <div>
                 <a href="#">Contact Me!</a>
-                <a href="#">My Works</a>
+                <a href="#myworks">My Works</a>
             </div>
         </header >
     )

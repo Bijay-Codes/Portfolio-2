@@ -1,4 +1,4 @@
-import { SOFTWARE_DATA, TECH_DATA } from "./tech-data"
+import { SOFTWARE_DATA, TECH_DATA } from "./tech-data";
 export const dataToShow = {
     techStack: [
         TECH_DATA.html, TECH_DATA.css,
@@ -13,13 +13,13 @@ export const dataToShow = {
     projects: [
         {
             name: 'track talk',
-            completeIn: 43,
+            completedIn: 43,
             techUsed: [
                 TECH_DATA.html, TECH_DATA.css,
                 TECH_DATA.js
             ],
-            tittle: 'A expenses tracker that also judges your spending habits- Track_talk',
-            description: ''
+            title: 'A expenses tracker that also judges your spending habits- Track_talk',
+            image: ['meaw', 'meawss']
         }
     ]
 }
