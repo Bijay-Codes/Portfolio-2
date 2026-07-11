@@ -1,4 +1,4 @@
-import { SOFTWARE_DATA, TECH_DATA } from "./tech-data";
+import { MEDIA_DATA, SOFTWARE_DATA, TECH_DATA } from "./tech-data";
 export const dataToShow = {
     techStack: [
         TECH_DATA.html, TECH_DATA.css,
@@ -21,5 +21,9 @@ export const dataToShow = {
             title: 'A expenses tracker that also judges your spending habits- Track_talk',
             image: ['meaw', 'meawss']
         }
-    ]
+    ],
+    social: {
+        github: MEDIA_DATA.github,
+        linkedin: MEDIA_DATA.linkedin
+    }
 }

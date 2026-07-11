@@ -1,4 +1,4 @@
-import type { data } from "./data-types";
+import type { data, socialData } from "./data-types";
 
 // whats a record???? well it is a inbuilt class/utility type of typescript
 //  what its doing? what normal types does but it takes 2 input and for objects mostly
@@ -37,16 +37,28 @@ export const TECH_DATA: Record<string, data> = {
     }
 }
 
+export const MEDIA_DATA: Record<string, socialData> = {
+    linkedin: {
+        title: 'Linkedin',
+        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg',
+        link: 'https://linkedin.com/in/bijay-verma-876b353a4'
+    },
+    github: {
+        title: 'Github',
+        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg',
+        link: 'https://github.com/Bijay-Codes'
+    }
+}
+
 export const SOFTWARE_DATA: Record<string, data> = {
     git: {
         label: 'github',
         title: 'version control',
-        logo: 'src'
+        logo: MEDIA_DATA.github.logo
     },
     figma: {
         label: 'figma',
         title: 'prototyping & wireframing',
-        logo: 'src'
+        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg'
     }
-
 }
