@@ -1,4 +1,7 @@
-export function Hero() {
+import type { data_to_show } from "../../portfolio-data/data-types";
+
+export function Hero({ data }: { data: data_to_show }) {
+    const { aboutMe } = data;
     return (
         <header>
             <h1>Hey there!</h1>
@@ -8,10 +11,10 @@ export function Hero() {
                 className="text-black"
             >Bijay</span> /&gt;</span>
             </h2>
-            <h3>A <span>Frontend developer</span> ⭔ Open to work</h3>
+            <h3>{aboutMe.tagline}</h3>
 
             <div>
-                <a href="#">Contact Me!</a>
+                <a href="#contacts">Contact Me!</a>
                 <a href="#myworks">My Works</a>
             </div>
         </header >

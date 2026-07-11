@@ -3,8 +3,9 @@ import type { data_to_show } from "../../portfolio-data/data-types";
 export function Footer({ data }: { data: data_to_show }) {
     const { social } = data;
     return (
-        <footer>
-            <h3>Want to contact with me?</h3>
+        <footer id="contacts">
+            <h3>My contacts</h3>
+            <span>Want to work with me? drop a message</span>
             <div>
                 <span>
                     <img loading="lazy" src={social.github.logo} alt="github logo"

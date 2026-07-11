@@ -13,7 +13,7 @@ export function TechStack({ data }: { data: data_to_show }) {
                 {
                     techStack.map(tech => {
                         return (
-                            <div>
+                            <div key={tech.label}>
                                 <img
                                     loading="lazy"
                                     src={tech.logo} alt={tech.label}

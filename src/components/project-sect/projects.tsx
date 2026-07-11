@@ -8,7 +8,7 @@ export function Projects({ data }: { data: data_to_show }) {
             {
                 projects.map(work => {
                     return (
-                        <section>
+                        <section key={work.name}>
                             <h4>{work.name}</h4>
                             <h5>{work.title}</h5>
                             <span>{work.completedIn} days</span>
@@ -24,7 +24,7 @@ function TechUsed({ work }: { work: project_data }) {
     return (
         <div className="flex gap-4">{work.techUsed.map(tech => {
             return (
-                <div title={tech.title}>
+                <div key={tech.label} title={tech.title}>
                     <img
                         loading="lazy"
                         src={tech.logo} alt={tech.label}
