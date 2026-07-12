@@ -7,8 +7,15 @@ export type project_data = {
     name: string;
     completedIn: number;
     techUsed: data[];
-    title: string;
-    image: string[];
+    intro: string;
+    links: {
+        sourceLink: string;
+        liveLink: string;
+    }
+    image: {
+        main: string;
+        sec: string[];
+    };
 }
 
 export type socialData = {

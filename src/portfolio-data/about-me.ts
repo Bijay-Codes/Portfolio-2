@@ -42,8 +42,47 @@ export const dataToShow = {
                 TECH_DATA.html, TECH_DATA.css,
                 TECH_DATA.js
             ],
-            title: 'An expenses tracker that also judges your spending habits- Track-talk',
-            image: ['meaw', 'meawss']
+            intro: 'An expense tracker with a Roast Engine — tracks your edit/delete behavior across 3 ratios and calls out spending patterns tag by tag',
+            links: {
+                sourceLink: 'https://github.com/Bijay-Codes/Expenses-Tracker',
+                liveLink: 'https://track-talker.vercel.app'
+            },
+            image: {
+                main: 'src',
+                sec: ['src']
+            }
+        },
+        {
+            name: 'Favdex',
+            completedIn: 41,
+            techUsed: [
+                TECH_DATA.react, TECH_DATA.tailwind,
+                TECH_DATA.css],
+            intro: 'A Pokédex with a gamified care system — feed berries to build friendship, auto-favorite at 100%, all config-driven from one file',
+            links: {
+                sourceLink: 'https://github.com/Bijay-Codes/Favdex',
+                liveLink: 'https://favdex.vercel.app'
+            },
+            image: {
+                main: 'src',
+                sec: ['src']
+            }
+        },
+        {
+            name: 'FaunaUI',
+            completedIn: 22,
+            techUsed: [
+                TECH_DATA.react, TECH_DATA.typescript,
+                TECH_DATA.tailwind],
+            intro: 'A color-and-type theme picker — 40 curated palettes filtered by category, each backed by a built-in WCAG contrast engine (OKLCH math, no color libraries)',
+            links: {
+                sourceLink: 'https://github.com/Bijay-Codes/FaunaUI',
+                liveLink: 'https://faunaui.vercel.app'
+            },
+            image: {
+                main: 'src',
+                sec: ['src']
+            }
         }
     ],
     social: {

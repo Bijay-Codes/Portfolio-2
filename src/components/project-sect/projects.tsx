@@ -4,15 +4,19 @@ export function Projects({ data }: { data: data_to_show }) {
     const { projects } = data;
     return (
         <main id="myworks">
-            <h3>My Work</h3>
+            <h3>My Works</h3>
             {
                 projects.map(work => {
                     return (
                         <section key={work.name}>
                             <h4>{work.name}</h4>
-                            <h5>{work.title}</h5>
+                            <h5>{work.intro}</h5>
                             <span>{work.completedIn} days</span>
                             <TechUsed work={work} />
+                            <div>
+                                <a href={work.links.liveLink} target="_blank">Live demo</a>
+                                <a href={work.links.sourceLink} target="_blank">Source Code</a>
+                            </div>
                         </section>
                     )
                 })
