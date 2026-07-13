@@ -7,19 +7,20 @@ import type { data_to_show } from "../../portfolio-data/data-types";
 export function TechStack({ data }: { data: data_to_show }) {
     const { techStack } = data;
     return (
-        <section>
-            <h3>My Tech-stack</h3>
+        <section className="flex flex-col gap-4">
+            <h3 className="text-2xl">My Tech-stack</h3>
             <div className="flex gap-4">
                 {
                     techStack.map(tech => {
                         return (
-                            <div key={tech.label}>
+                            <div className="flex flex-col justify-center items-center"
+                                key={tech.label}>
                                 <img
                                     loading="lazy"
                                     src={tech.logo} alt={tech.label}
                                     className="w-10 aspect-square rounded"
                                 />
-                                <span className="capitalize">{tech.label}</span>
+                                <span className="capitalize text-sm text-surface-muted-fg">{tech.label}</span>
                             </div>
                         )
                     })

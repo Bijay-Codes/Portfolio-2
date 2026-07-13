@@ -6,7 +6,7 @@ import { Footer } from "./components/footer-sect/footer-sect";
 import { Bio } from "./components/bio-sect/bio-sect";
 function App() {
     return (
-        <section className="flex flex-col gap-10">
+        <section className="gap-10 flex flex-col bg-page text-page-fg p-3">
             <Hero data={dataToShow} />
             <Bio data={dataToShow} />
             <TechStack data={dataToShow} />
