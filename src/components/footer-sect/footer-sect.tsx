@@ -4,7 +4,7 @@ export function Footer({ data }: { data: data_to_show }) {
     const { social } = data;
     const styles_for_contact_icons = 'flex flex-col justify-center items-center'
     return (
-        <footer id="contacts" className="flex flex-col items-center gap-3">
+        <footer id="contacts" className="flex flex-col items-center gap-3 text-center sm:self-center">
             <h3 className="text-xl">Contact me</h3>
             <span>Have some idea you want to discuss? drop a message</span>
             <div className="flex items-center justify-center gap-4 p-2">

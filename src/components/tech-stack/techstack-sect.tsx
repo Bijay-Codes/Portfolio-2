@@ -8,8 +8,8 @@ export function TechStack({ data }: { data: data_to_show }) {
     const { techStack } = data;
     return (
         <section className="flex flex-col gap-4">
-            <h3 className="text-2xl">My Tech-stack</h3>
-            <div className="flex gap-4">
+            <h3 className="text-2xl">Tech-stack</h3>
+            <div className="flex flex-wrap gap-4">
                 {
                     techStack.map(tech => {
                         return (

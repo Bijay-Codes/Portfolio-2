@@ -63,3 +63,34 @@
     --danger: oklch(0.7106 0.1661 22.2162);
     --danger-fg: oklch(0.2575 0.0886 26.0418);
 }
+
+#root {
+    background: var(--page);
+}
+
+.gradient-text {
+    background: linear-gradient(135deg,
+            #ff007a,
+            #7928ca,
+            #00d2ff);
+
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: terminal-glow 8s ease infinite;
+}
+
+@keyframes terminal-glow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
