@@ -6,7 +6,7 @@ export function Footer({ data }: { data: data_to_show }) {
     return (
         <footer id="contacts" className="flex flex-col items-center gap-3 text-center sm:self-center">
             <h3 className="text-xl">Contact me</h3>
-            <span>Have some idea you want to discuss? drop a message</span>
+            <span>Have an idea you want to discuss? drop a message</span>
             <div className="flex items-center justify-center gap-4 p-2">
                 <span className={styles_for_contact_icons}>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="w-8 aspect-square" viewBox="0 0 16 16">

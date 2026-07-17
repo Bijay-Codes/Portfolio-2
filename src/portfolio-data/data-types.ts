@@ -5,6 +5,7 @@ export type techdata = {
 }
 export type project_data = {
     name: string;
+    keyPoints: string[];
     completedIn: number;
     techUsed: techdata[];
     intro: string;
@@ -12,10 +13,6 @@ export type project_data = {
         sourceLink: string;
         liveLink: string;
     }
-    image: {
-        main: string;
-        sec: string[];
-    };
 }
 
 export type socialData = {

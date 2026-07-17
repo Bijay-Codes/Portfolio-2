@@ -1,5 +1,5 @@
 import type { data_to_show, project_data } from "../portfolio-data/data-types";
-
+import { Link } from "react-router";
 export function Projects({ data }: { data: data_to_show }) {
     const { projects } = data;
     return (
@@ -9,7 +9,7 @@ export function Projects({ data }: { data: data_to_show }) {
                 Built
             </span>
             </h3>
-            <div className="flex flex-wrap gap-6">
+            <div className="flex flex-wrap gap-6 sm:grid sm:grid-cols-2 max-w-300">
                 {
                     projects.map(proj => {
                         return (
@@ -26,22 +26,31 @@ function Builds({ work }: { work: project_data }) {
     return (
         // Parent
         <section key={work.name} className="bg-surface-muted p-4 rounded
+            first:col-span-2
             flex flex-col justify-center gap-4">
             {/* Child- renders project name and terminal badges */}
             <div className="flex">
-                <h4 className="text-xl">{work.name}</h4>
+                <h4 className="text-xl text-surface-muted-fg">
+                    $sudo --pitch {work.name}
+                </h4>
                 {/* three circles in each projects come from this */}
                 <TerminalCircles style={three_dots} />
             </div>
             {/* details of projects- to edit go to portfolio-data/about-me file */}
-            <h5 className="text-md max-w-130">{work.intro}</h5>
+            <p className="text-md max-w-250">bash: {work.intro}</p>
 
             {/* time taken to build project */}
-            <span>{work.completedIn} days</span>
+            <span className="text-surface-muted-fg">
+                --time-taken <span className="text-surface-fg">
+                    {work.completedIn} days</span>
+            </span>
             {/* tech stack */}
             <TechUsed work={work} />
             {/* Live demo and github link comes from this */}
             <Links work={work} />
+            {work.name === 'favdex' &&
+                <Link to='/casestudy' className="text-lg bg-surface p-2 rounded-lg border border-accent/30 w-fit font-extrabold uppercase">Case study</Link>
+            }
         </section>
 
     )
@@ -57,8 +66,8 @@ function TechUsed({ work }: { work: project_data }) {
                     <img
                         loading="lazy"
                         src={tech.logo} alt={tech.label}
-                        className="w-8 aspect-square rounded" />
-                    <span className="capitalize text-sm">{tech.label}</span>
+                        className="w-6 aspect-square rounded" />
+                    <span className="text-xs">{tech.label}</span>
                 </div>
             )
         })}

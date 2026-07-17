@@ -7,7 +7,7 @@ import type { data_to_show } from "../portfolio-data/data-types";
 export function TechStack({ data }: { data: data_to_show }) {
     const { techStack } = data;
     return (
-        <section className="flex flex-col gap-4">
+        <section className="flex flex-col w-full gap-4">
             <span className="text-surface-muted-fg text-xl">$echo --tech-stack</span>
             <div className="flex flex-wrap gap-4">
                 {
@@ -15,7 +15,7 @@ export function TechStack({ data }: { data: data_to_show }) {
                         return (
                             <div className="flex flex-col justify-center items-center"
                                 key={tech.label}>
-                                <img
+                                <img title={tech.title}
                                     loading="lazy"
                                     src={tech.logo} alt={tech.label}
                                     className="w-10 aspect-square rounded"
