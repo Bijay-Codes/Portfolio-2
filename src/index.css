@@ -1,78 +1,56 @@
 @import "tailwindcss";
 
 @theme {
-    --color-page: var(--page);
-    --color-page-fg: var(--page-fg);
-    --color-surface: var(--surface);
-    --color-surface-fg: var(--surface-fg);
-    --color-surface-muted: var(--surface-muted);
-    --color-surface-muted-fg: var(--surface-muted-fg);
-    --color-primary: var(--primary);
-    --color-primary-fg: var(--primary-fg);
-    --color-secondary: var(--secondary);
-    --color-secondary-fg: var(--secondary-fg);
-    --color-accent: var(--accent);
-    --color-accent-fg: var(--accent-fg);
-    --color-success: var(--success);
-    --color-success-fg: var(--success-fg);
-    --color-warning: var(--warning);
-    --color-warning-fg: var(--warning-fg);
-    --color-danger: var(--danger);
-    --color-danger-fg: var(--danger-fg);
+    --color-page: oklch(0.1344 0 0);
+    --color-page-fg: oklch(0.9842 0.0034 247.8578);
+    --color-surface: oklch(0.1913 0 0);
+    --color-surface-fg: oklch(0.9276 0.0058 264.5313);
+    --color-surface-muted: oklch(0.252 0 0);
+    --color-surface-muted-fg: oklch(0.7118 0.0129 286.0665);
+    --color-primary: oklch(0.8717 0.0093 258.3383);
+    --color-primary-fg: oklch(0.1448 0 0);
+    --color-secondary: oklch(0.5517 0.0138 285.9384);
+    --color-secondary-fg: oklch(1 0 0);
+    --color-accent: oklch(0.809 0.2000 293.5412);
+    --color-accent-fg: oklch(0.2573 0.0861 281.2883);
+    --color-success: oklch(0.8003 0.1821 151.711);
+    --color-success-fg: oklch(0.2664 0.0628 152.9343);
+    --color-warning: oklch(0.8369 0.1644 84.4286);
+    --color-warning-fg: oklch(0.2791 0.0742 45.6352);
+    --color-danger: oklch(0.7106 0.1661 22.2162);
+    --color-danger-fg: oklch(0.2575 0.0886 26.0418);
 }
 
-.light {
-    --page: oklch(0.9851 0 0);
-    --page-fg: oklch(0.1822 0 0);
-    --surface: oklch(0.9632 0.0034 247.8588);
-    --surface-fg: oklch(0.235 0 0);
-    --surface-muted: oklch(0.923 0.0069 247.9002);
-    --surface-muted-fg: oklch(0.4631 0.0152 244.4976);
-    --primary: oklch(0.2781 0.0296 256.848);
-    --primary-fg: oklch(1 0 0);
-    --secondary: oklch(0.4461 0.0263 256.8018);
-    --secondary-fg: oklch(1 0 0);
-    --accent: oklch(0.5856 0.2189 292.7172);
-    --accent-fg: oklch(1 0 0);
-    --success: oklch(0.5273 0.1371 150.0693);
-    --success-fg: oklch(1 0 0);
-    --warning: oklch(0.5553 0.1455 48.9975);
-    --warning-fg: oklch(1 0 0);
-    --danger: oklch(0.5054 0.1905 27.5181);
-    --danger-fg: oklch(1 0 0);
-}
-
-/* Dark Mode */
-:root {
-    --page: oklch(0.1344 0 0);
-    --page-fg: oklch(0.9842 0.0034 247.8578);
-    --surface: oklch(0.1913 0 0);
-    --surface-fg: oklch(0.9276 0.0058 264.5313);
-    --surface-muted: oklch(0.252 0 0);
-    --surface-muted-fg: oklch(0.7118 0.0129 286.0665);
-    --primary: oklch(0.8717 0.0093 258.3383);
-    --primary-fg: oklch(0.1448 0 0);
-    --secondary: oklch(0.5517 0.0138 285.9384);
-    --secondary-fg: oklch(1 0 0);
-    --accent: oklch(0.809 0.2000 293.5412);
-    --accent-fg: oklch(0.2573 0.0861 281.2883);
-    --success: oklch(0.8003 0.1821 151.711);
-    --success-fg: oklch(0.2664 0.0628 152.9343);
-    --warning: oklch(0.8369 0.1644 84.4286);
-    --warning-fg: oklch(0.2791 0.0742 45.6352);
-    --danger: oklch(0.7106 0.1661 22.2162);
-    --danger-fg: oklch(0.2575 0.0886 26.0418);
-}
+/* @theme {
+    --color-page: oklch(0.1536 0.0117 132.4096);
+    --color-page-fg: oklch(0.9876 0.0094 119.5729);
+    --color-surface: oklch(0.2093 0.0188 131.5301);
+    --color-surface-fg: oklch(0.9482 0.0353 121.0003);
+    --color-surface-muted: oklch(0.2764 0.0289 130.9091);
+    --color-surface-muted-fg: oklch(0.8472 0.0519 123.2483);
+    --color-primary: oklch(0.82 0.19 110);
+    --color-primary-fg: oklch(0.18 0 0);
+    --color-secondary: oklch(0.71 0.019 261);
+    --color-secondary-fg: oklch(0.18 0 0);
+    --color-accent: oklch(0.904 0.250 131);
+    --color-accent-fg: oklch(0.18 0 0);
+    --color-success-color: oklch(0.63 0.15 150);
+    --color-success-fg: oklch(0.18 0 0);
+    --color-warning-color: oklch(0.66 0.17 55);
+    --color-warning-fg: oklch(0.18 0 0);
+    --color-danger-color: oklch(0.55 0.19 25);
+    --color-danger-fg: oklch(1 0 0);
+} */
 
 #root {
-    background: var(--page);
+    background: var(--color-page);
 }
 
 .gradient-text {
     background: linear-gradient(135deg,
-            #ff007a,
-            #7928ca,
-            #00d2ff);
+            var(--color-primary),
+            var(--color-secondary),
+            var(--color-accent));
 
     background-size: 300% 300%;
     -webkit-background-clip: text;

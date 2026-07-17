@@ -1,4 +1,4 @@
-import type { data_to_show, project_data } from "../../portfolio-data/data-types";
+import type { data_to_show, project_data } from "../portfolio-data/data-types";
 
 export function Projects({ data }: { data: data_to_show }) {
     const { projects } = data;
@@ -88,3 +88,4 @@ function Links({ work }: { work: project_data }) {
         </div>
     )
 }
+

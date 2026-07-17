@@ -1,4 +1,4 @@
-import type { data_to_show } from "../../portfolio-data/data-types";
+import type { data_to_show } from "../portfolio-data/data-types";
 
 export function Footer({ data }: { data: data_to_show }) {
     const { social } = data;

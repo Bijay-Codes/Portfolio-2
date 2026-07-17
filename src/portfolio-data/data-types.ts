@@ -1,4 +1,4 @@
-export type data = {
+export type techdata = {
     label: string;
     title: string;
     logo: string;
@@ -6,7 +6,7 @@ export type data = {
 export type project_data = {
     name: string;
     completedIn: number;
-    techUsed: data[];
+    techUsed: techdata[];
     intro: string;
     links: {
         sourceLink: string;
@@ -23,17 +23,17 @@ export type socialData = {
     logo: string;
     link: string;
 }
-export type focusData = {
-    label: string;
-    info: string;
+type imagesSRC = {
+    title: string;
+    src: string;
 }
 export interface data_to_show {
     aboutMe: {
         tagline: string;
-        myFocus: focusData[];
     }
-    techStack: data[];
-    tools: data[];
+    sliderImages: imagesSRC[]
+    techStack: techdata[];
+    tools: techdata[];
     projects: project_data[];
     social: {
         github: socialData,

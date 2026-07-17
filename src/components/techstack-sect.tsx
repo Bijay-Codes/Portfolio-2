@@ -1,4 +1,4 @@
-import type { data_to_show } from "../../portfolio-data/data-types";
+import type { data_to_show } from "../portfolio-data/data-types";
 // interface dataToShowType {
 //     data: data_to_show
 // }
@@ -8,7 +8,7 @@ export function TechStack({ data }: { data: data_to_show }) {
     const { techStack } = data;
     return (
         <section className="flex flex-col gap-4">
-            <h3 className="text-2xl">Tech-stack</h3>
+            <span className="text-surface-muted-fg text-xl">$echo --tech-stack</span>
             <div className="flex flex-wrap gap-4">
                 {
                     techStack.map(tech => {
