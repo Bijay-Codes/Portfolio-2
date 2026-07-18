@@ -27,24 +27,21 @@ export const dataToShow = {
             completedIn: 41,
             keyPoints: favdexCaseStudy.keyFeatures,
             techUsed: favdexCaseStudy.stack,
-            intro: 'A Pokédex with a gamified care system — feed berries to build friendship, auto-favorite at 100%, all config-driven from one file',
+            intro: `A Feature-rich pokedex site built using PokeAPI, React, Tailwind and React router-
+            All of which i had no experince on before, built to learn these frameworks and of-course because the current Pokedex sites felt clunky to me with not much features`,
             links: favdexCaseStudy.links
         },
         {
             name: 'FaunaUI',
             keyPoints: [
-                'Infinite scroll (Intersection Observer) — fixed a double-fetch bug caused by the sentinel being visible on initial load',
-                'Favorites list capped at 60 (matches PC box limit in the games), unlocked via friendship points from feeding berries',
-                'localStorage caching, stripped down to only needed fields to stay under the 5MB limit',
-                'Click a Pokémon to hear its cry, toggle shiny/normal sprite',
-                'Search with name suggestions',
-                'Lighthouse scores 99/100/100/100 — cut fetch per batch size from 20 > 9 to fix an LCP issue from large sprite images'
+                '40 animal-inspired palettes, each with light / dark mode applied live to the site',
+                'Live WCAG contrast scores on every text/background pairing — AA/AAA rating shown before use',
+                'OKLCH color format for perceptually consistent color across hues',
+                'Multiple export formats: CSS custom properties, Tailwind config, or Figma-ready hex'
             ],
             completedIn: 22,
-            techUsed: [
-                TECH_DATA.react, TECH_DATA.typescript,
-                TECH_DATA.tailwind],
-            intro: 'A color-and-type theme picker — 40 curated palettes filtered by category, each backed by a built-in WCAG contrast engine (OKLCH math, no color libraries)',
+            techUsed: [TECH_DATA.react, TECH_DATA.typescript, TECH_DATA.tailwind],
+            intro: 'FaunaUI- a theme explorer tool built to fix the "decision paralysis" issues I was running into -- featuring 40 curated palettes filtered by category, each checked by an integrated WCAG contrast checker',
             links: {
                 sourceLink: 'https://github.com/Bijay-Codes/FaunaUI',
                 liveLink: 'https://faunaui.vercel.app'
@@ -53,19 +50,18 @@ export const dataToShow = {
         {
             name: 'Track-talk',
             keyPoints: [
-                'Infinite scroll (Intersection Observer) — fixed a double-fetch bug caused by the sentinel being visible on initial load',
-                'Favorites list capped at 60 (matches PC box limit in the games), unlocked via friendship points from feeding berries',
-                'localStorage caching, stripped down to only needed fields to stay under the 5MB limit',
-                'Click a Pokémon to hear its cry, toggle shiny/normal sprite',
-                'Search with name suggestions',
-                'Lighthouse scores 99/100/100/100 — cut fetch per batch size from 20 > 9 to fix an LCP issue from large sprite images'
+                'Roast Engine — analyzes edit/add/delete ratios to detect behavioral patterns (indecisive editing / deletion "denial"), each triggers diffrent responses',
+                'Edit/delete locked after 24 hours — enforced data immutability',
+                'Dynamic "Hall of Shame" surfacing worst transaction on the monthly roast page',
+                'Doughnut chart stats — spending by category, most-used category, preferred payment mode and much more',
+                '22 preset categories with emoji and custom tags',
             ],
             completedIn: 43,
             techUsed: [
                 TECH_DATA.html, TECH_DATA.css,
                 TECH_DATA.js
             ],
-            intro: 'An expense tracker with a Roast Engine — tracks your edit/delete behavior across 3 ratios and calls out spending patterns tag by tag',
+            intro: 'An expense tracker- Thats just basic. How about one that talks back at you when you spend too much on something? or what about one that keeps a track of how many times you edit / delete transactions? check it out from the below link.',
             links: {
                 sourceLink: 'https://github.com/Bijay-Codes/Expenses-Tracker',
                 liveLink: 'https://track-talker.vercel.app'

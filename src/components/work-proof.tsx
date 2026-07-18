@@ -1,26 +1,32 @@
-import { Slider } from "./slider"
+// import { Slider } from "./slider"
 export function ProofOfWork() {
     return (
         <section className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-h-100">
-            <ImageSlides />
+            {/* <ImageSlides /> */}
             <ProjectsLog />
         </section>
     )
 }
 
-function ImageSlides() {
-    return (
-        <div
-            className="bg-surface w-full rounded-lg overflow-hidden relative
-            border-l-4 border-r-4 border-accent flex flex-col">
-            {/* <BrowserBar /> */}
-            <div className="w-full aspect-video">
-                <Slider />
-            </div>
-        </div>
-    )
-}
-
+// function ImageSlides() {
+//     return (
+//         <div
+//             className="bg-surface w-full rounded-lg overflow-hidden relative
+//             border-l-4 border-r-4 border-accent flex flex-col">
+//             {/* <BrowserBar /> */}
+//             <div className="w-full aspect-video">
+//                 <Slider />
+//             </div>
+//         </div>
+//     )
+// }
+// function BIO() {
+//     return (
+//         <div>
+//             <h1></h1>
+//         </div>
+//     )
+// }
 function ProjectsLog() {
     return (
         <div className="h-full p-4 flex flex-col gap-2 text-surface-muted-fg bg-surface rounded-lg">

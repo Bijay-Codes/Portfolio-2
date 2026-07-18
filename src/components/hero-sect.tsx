@@ -6,9 +6,9 @@ export function Hero({ data }: { data: data_to_show }) {
         <>
             <Initialize />
             <header
-                className="flex flex-col sm:grid grid-cols-[1fr_auto] items-center
+                className="flex flex-col sm:grid grid-cols-[1fr_auto] items-end
             bg-surface border-surface-fg relative gap-6
-            p-4 rounded-lg w-full max-w-400">
+            py-10 px-6 rounded-lg w-full max-w-350">
                 <div className="flex flex-col">
                     <Name />
                     <Tagline aboutMe={aboutMe} />
@@ -29,7 +29,7 @@ function Initialize() {
                 <span className="text-success">bijay@codes:</span>
                 ~$ sudo init --portfolio</span>
             <span>bash: ...</span>
-            <span>bash: ...nope</span>
+            <span>bash: ...nope, do it yourself</span>
             <span>
                 <span className="text-success">bijay@codes:</span>
                 ~$ npm run build
@@ -52,11 +52,10 @@ function Name() {
                 </span>
                 ~$ whoami
             </h1>
-            <h2 className="text-2xl">This is
-                <span
-                    className="text-3xl"> &lt;<span
-                        className="gradient-text font-extrabold uppercase tracking-widest"
-                    >Bijay</span>/&gt;</span>
+            <h2 className="text-2xl">This is <span
+                className="text-3xl bg-primary/80 border border-secondary border-r-3 text-primary-fg">&lt;<span
+                    className="font-extrabold tracking-widest"
+                >Bijay</span>/&gt;</span>
             </h2>
         </div>
     )
@@ -80,16 +79,16 @@ function Tagline({ aboutMe }: tagline) {
 }
 
 function Links() {
+    const linksStyle = 'font-extrabold py-1 px-2 sm:py-2 sm:px-4 rounded';
     return (
         <div className="flex items-center gap-4">
             <a
-                className="bg-accent font-extrabold text-accent-fg sm:py-3 sm:px-6 py-1 px-2 rounded"
+                className={`bg-accent font-extrabold text-accent-fg ${linksStyle}`}
                 href="#contacts">--connect</a>
             <a
-                className="bg-primary text-primary-fg sm:py-3 sm:px-6 py-1 px-2 rounded-lg"
+                className={`bg-primary text-primary-fg ${linksStyle}`}
                 href="#myworks">--projects</a>
         </div>
-
     )
 }
 
