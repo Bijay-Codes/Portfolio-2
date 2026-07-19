@@ -1,4 +1,5 @@
 import type { data_to_show, project_data } from "../portfolio-data/data-types";
+import { motion } from "framer-motion";
 import { Link } from "react-router";
 export function Projects({ data }: { data: data_to_show }) {
     const { projects } = data;
@@ -11,9 +12,9 @@ export function Projects({ data }: { data: data_to_show }) {
             </h3>
             <div className="flex flex-wrap gap-6 sm:grid sm:grid-cols-2 max-w-350">
                 {
-                    projects.map(proj => {
+                    projects.map((proj, i) => {
                         return (
-                            <Builds key={proj.name} work={proj} />
+                            <Builds key={proj.name} work={proj} index={i} />
                         )
                     })
                 }
@@ -21,10 +22,18 @@ export function Projects({ data }: { data: data_to_show }) {
         </main>
     )
 }
-function Builds({ work }: { work: project_data }) {
+function Builds({ work, index }: { work: project_data; index: number }) {
+    const baseDelay = 0.2;
+    const gap = 0.2;
     return (
         // Parent
-        <section key={work.name} className="bg-surface-muted first:col-span-2 rounded-2xl">
+        <motion.section key={work.name}
+            className="bg-surface-muted first:col-span-2 rounded-2xl rounded-t-sm"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{ duration: 0.2, delay: baseDelay + (index * gap), ease: 'easeIn' }}
+        >
             {/* Child- renders project name and terminal badges */}
             <TerminalCircles />
             <div className="p-4
@@ -48,12 +57,19 @@ function Builds({ work }: { work: project_data }) {
                 <KeyFeatures features={work.keyPoints} />
                 <TechUsed work={work} />
                 {/* Live demo and github link comes from this */}
-                <Links work={work} />
-                {work.name === 'Favdex' &&
-                    <Link to='/casestudy' className="text-lg bg-surface py-1 px-4 rounded-lg border border-accent/60 hover:border-accent w-fit font-bold uppercase">Case study</Link>
-                }
+                <div className="flex gap-4">
+                    <Links work={work} />
+                    {work.name === 'Favdex' &&
+                        <Link to='/casestudy' className="text-lg py-1 px-4 rounded-lg w-fit font-bold border
+                        bg-surface border-accent/60
+                        hover:border-accent hover:drop-shadow-xl hover:drop-shadow-accent
+                        hover:bg-accent/30 hover:text-accent-fg active:bg-accent">
+                            --Case-Study
+                        </Link>
+                    }
+                </div>
             </div>
-        </section>
+        </motion.section>
 
     )
 }
@@ -62,13 +78,13 @@ function TechUsed({ work }: { work: project_data }) {
     return (
         <div className="flex gap-4">{work.techUsed.map(tech => {
             return (
-                <div className="flex flex-col items-center justify-center"
+                <div className="flex flex-col items-center justify-center hover:scale-110"
                     key={tech.label}
                     title={tech.title}>
                     <img
                         loading="lazy"
                         src={tech.logo} alt={tech.label}
-                        className="w-6 aspect-square rounded" />
+                        className="w-8 transition-all duration-150 ease-in-out aspect-square rounded" />
                     <span className="text-xs">{tech.label}</span>
                 </div>
             )
@@ -80,7 +96,7 @@ function TechUsed({ work }: { work: project_data }) {
 export function TerminalCircles() {
     const three_dots = 'w-4 h-4 rounded-full';
     return (
-        <div className="ml-auto flex gap-2 opacity-70 justify-end h-8 items-center px-4 bg-secondary w-full">
+        <div className="ml-auto flex gap-2 opacity-70 justify-end h-8 items-center px-4 bg-primary/30 w-full">
             <span className={`${three_dots} bg-success`}></span>
             <span className={`${three_dots} bg-warning`}></span>
             <span className={`${three_dots} bg-danger`}></span>
@@ -91,10 +107,15 @@ export function TerminalCircles() {
 function Links({ work }: { work: project_data }) {
     return (
         <div className="flex gap-6 items-center">
-            <a className="py-1 px-4 bg-accent text-accent-fg rounded"
+            <a
+                className="py-1 px-4 bg-accent text-accent-fg rounded
+                 hover:bg-accent/60 hover:drop-shadow-xl hover:drop-shadow-accent
+                 hover:outline-2 hover:outline-accent"
                 href={work.links.liveLink}
                 target="_blank">Live demo</a>
-            <a className="py-1 px-4 bg-primary text-primary-fg rounded-lg"
+            <a className="py-1 px-4 bg-primary  text-primary-fg rounded-lg
+             hover:bg-primary/60 hover:text-page-fg hover:outline hover:outline-primary
+             hover:drop-shadow-xl hover:drop-shadow-primary"
                 href={work.links.sourceLink}
                 target="_blank"> Source Code</a>
         </div>
