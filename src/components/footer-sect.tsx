@@ -6,7 +6,7 @@ export function Footer({ data }: { data: data_to_show }) {
         <footer id="contacts" className="flex flex-col items-center gap-3 sm:self-center
          text-center bg-surface w-screen border-t-4 border-accent p-4">
             <h3 className="text-xl">Contact me</h3>
-            <span className="text-surface-fg max-w-250">
+            <span className="text-surface-fg max-w-250 text-sm">
                 Want to make a website? maybe colaborate to make something or have a chat whatever it may be drop the details lets chat and create something memorable!
             </span>
             <div className="flex items-center justify-center gap-4 p-2 text-surface-fg">

@@ -4,8 +4,8 @@ import { Link } from "react-router";
 export function Projects({ data }: { data: data_to_show }) {
     const { projects } = data;
     return (
-        <main id="myworks" className="flex flex-col gap-4">
-            <h3 className="text-2xl">What i've <span
+        <main id="myworks" className="flex flex-col gap-4 mt-4">
+            <h3 className="text-2xl font-heading">What i've <span
                 className="uppercase font-extrabold gradient-text text-3xl tracking-widest">
                 Built
             </span>
@@ -28,7 +28,8 @@ function Builds({ work, index }: { work: project_data; index: number }) {
     return (
         // Parent
         <motion.section key={work.name}
-            className="bg-surface-muted first:col-span-2 rounded-2xl rounded-t-sm"
+            className="bg-surface-muted first:col-span-2 rounded-2xl rounded-t-sm
+            grid"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.1 }}
@@ -36,10 +37,9 @@ function Builds({ work, index }: { work: project_data; index: number }) {
         >
             {/* Child- renders project name and terminal badges */}
             <TerminalCircles />
-            <div className="p-4
-            flex flex-col gap-4 justify-center">
+            <div className="p-4 flex flex-col gap-4 justify-center">
                 <div className="flex flex-1">
-                    <h4 className="text-xl text-surface-muted-fg">
+                    <h4 className="text-xl text-surface-muted-fg font-heading">
                         $sudo --pitch {work.name}
                     </h4>
                     {/* three circles in each projects come from this */}
@@ -128,7 +128,10 @@ function KeyFeatures({ features }: { features: string[] }) {
             <h2>--key-points:</h2>
             <ul className="text-surface-muted-fg hover:text-surface-fg ">
                 {features.map((feat: string, i: number) => {
-                    return <li className="m-2 text-xs marker:content-['$_']" key={i}>{feat}</li>
+                    return <li className="m-2 text-sm marker:content-['$_']"
+                        key={i}>
+                        {feat}
+                    </li>
                 })}
             </ul>
         </section>

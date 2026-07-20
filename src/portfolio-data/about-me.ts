@@ -1,4 +1,4 @@
-import { MEDIA_DATA, SOFTWARE_DATA, TECH_DATA } from "./tech-data";
+import { MEDIA_DATA, TECH_DATA } from "./tech-data";
 import { favdexCaseStudy } from "./casestudy";
 export const dataToShow = {
     aboutMe: {
@@ -15,11 +15,6 @@ export const dataToShow = {
         TECH_DATA.html, TECH_DATA.css,
         TECH_DATA.js, TECH_DATA.react,
         TECH_DATA.tailwind, TECH_DATA.typescript
-    ],
-
-    tools: [
-        SOFTWARE_DATA.figma,
-        SOFTWARE_DATA.git
     ],
     projects: [
         {
@@ -54,14 +49,13 @@ export const dataToShow = {
                 'Edit/delete locked after 24 hours — enforced data immutability',
                 'Dynamic "Hall of Shame" surfacing worst transaction on the monthly roast page',
                 'Doughnut chart stats — spending by category, most-used category, preferred payment mode and much more',
-                '22 preset categories with emoji and custom tags',
             ],
             completedIn: 43,
             techUsed: [
                 TECH_DATA.html, TECH_DATA.css,
                 TECH_DATA.js
             ],
-            intro: 'An expense tracker- Thats just basic. How about one that talks back at you when you spend too much on something? or what about one that keeps a track of how many times you edit / delete transactions? check it out from the below link.',
+            intro: 'An expense tracker? Basic. How about one that points at you when you spend too much? What about one that tracks of how many times you edit / delete transactions? Thats track-talk.',
             links: {
                 sourceLink: 'https://github.com/Bijay-Codes/Expenses-Tracker',
                 liveLink: 'https://track-talker.vercel.app'

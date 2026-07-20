@@ -32,15 +32,21 @@ function Name() {
                 animate={{ inset: '0 100% 0 0' }}
                 transition={{ duration: 2, delay: delay }}
                 className="text-md text-surface-muted-fg pb-2">
-                <span className="text-success">
+                <span className="text-success font-heading tracking-wide">
                     bijay@codes:
                 </span>
                 ~$ whoami
             </motion.h1>
-            <h2 className="text-2xl">This is <span
-                className="text-3xl bg-primary/80 border border-secondary border-r-6 text-primary-fg">&lt;<span
-                    className="font-extrabold tracking-widest"
-                >Bijay</span>/&gt;</span>
+            <h2 className="text-2xl font-heading tracking-widest">This is
+                <span
+                    className="text-3xl bg-primary/80 border border-secondary border-r-6 text-primary-fg">
+                    &lt;
+                    <span
+                        className="font-extrabold tracking-widest">
+                        Bijay
+                    </span>
+                    /&gt;
+                </span>
             </h2>
         </div>
     )

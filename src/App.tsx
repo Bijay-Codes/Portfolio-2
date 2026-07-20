@@ -8,9 +8,9 @@ function App() {
     return (
         <>
             <Initialize duration={0.3} />
-            <section className="gap-7 p-3 sm:p-6 flex flex-col items-center sm:items-start
+            <section className="gap-7 p-4 sm:p-6 flex flex-col items-center sm:items-start
          bg-page text-page-fg max-w-450 m-auto
-         transition-colors duration-200 ease-in-out">
+         transition-colors duration-200 ease-in-out font-body">
 
                 <Hero data={dataToShow} />
                 <ProofOfWork />
@@ -28,7 +28,7 @@ function Initialize({ duration }: { duration: number }) {
             initial={{ inset: '0 10% 0 0' }}
             animate={{ inset: '0 100% 0 0' }}
             transition={{ duration: duration * 1.5, ease: 'linear' }}
-            className="flex flex-col self-start text-xs text-surface-muted-fg">
+            className="flex flex-col self-start text-xs text-surface-muted-fg font-heading font-bold">
             <motion.div
                 initial={{ clipPath: "inset(0 100% 0 0)" }}
                 animate={{ clipPath: "inset(0 0% 0 0)" }}

@@ -49,16 +49,3 @@ export const MEDIA_DATA: Record<string, socialData> = {
         link: 'https://github.com/Bijay-Codes'
     }
 }
-
-export const SOFTWARE_DATA: Record<string, techdata> = {
-    git: {
-        label: 'github',
-        title: 'version control',
-        logo: MEDIA_DATA.github.logo
-    },
-    figma: {
-        label: 'figma',
-        title: 'prototyping & wireframing',
-        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg'
-    }
-}

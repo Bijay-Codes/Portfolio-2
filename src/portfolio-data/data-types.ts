@@ -30,7 +30,6 @@ export interface data_to_show {
     }
     sliderImages: imagesSRC[]
     techStack: techdata[];
-    tools: techdata[];
     projects: project_data[];
     social: {
         github: socialData,
