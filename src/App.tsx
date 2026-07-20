@@ -8,7 +8,7 @@ function App() {
     return (
         <>
             <Initialize duration={0.3} />
-            <section className="gap-7 p-4 sm:p-6 flex flex-col items-center sm:items-start
+            <section className="gap-7 p-4 sm:p-6 sm:pb-0 pb-0 flex flex-col items-center sm:items-start
          bg-page text-page-fg max-w-450 m-auto
          transition-colors duration-200 ease-in-out font-body">
 

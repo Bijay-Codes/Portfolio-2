@@ -6,8 +6,8 @@ export function Hero({ data }: { data: data_to_show }) {
     return (
         <>
             <motion.header
-                initial={{ opacity: 0, scale: 0.90, y: 20 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
+                initial={{ opacity: 0, x: 40 }}
+                animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: duration * 1.5, duration: 0.4, ease: 'easeIn' }}
                 className="flex flex-col sm:grid grid-cols-[1fr_auto] sm:items-end
             bg-surface border-surface-fg relative gap-6
@@ -59,7 +59,7 @@ interface tagline {
 function Tagline({ aboutMe }: tagline) {
     return (
         <>
-            <h3 className="text-lg py-2 text-surface-fg">{aboutMe.tagline}</h3>
+            <h3 className="text-lg py-2 text-surface-fg font-heading">{aboutMe.tagline}</h3>
             <h4 className="text-surface-muted-fg text-sm">
                 $echo --status: <span className="uppercase text-surface-fg">
                     open to work
@@ -75,7 +75,7 @@ function Links() {
         <div>
             <a
                 className={`bg-accent font-extrabold text-accent-fg
-                    hover:bg-accent/60 hover:drop-shadow-xl hover:drop-shadow-accent hover:outline-2 hover:outline-accent ${linksStyle}`}
+                    hover:bg-accent/60 hover:drop-shadow-xl hover:drop-shadow-accent hover:outline-2 hover:outline-accent font-heading ${linksStyle}`}
                 href="#contacts">--contact</a>
             <a
                 className={`bg-primary text-primary-fg rounded-lg 

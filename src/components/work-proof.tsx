@@ -4,8 +4,7 @@ import { motion } from "framer-motion"
 export function ProofOfWork() {
     return (
         <section
-
-            className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-h-100">
+            className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-h-100 mb-10">
             <ProjectsLog />
             <motion.div
                 initial={{ x: -40 }}

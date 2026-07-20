@@ -20,7 +20,7 @@ function HomeLink() {
     return (
         <Link
             to='/'
-            className="fixed bottom-4 right-0 p-2 sm:p-4 bg-accent text-accent-fg rounded-l-full font-extrabold tracking-widest">Home</Link>
+            className="fixed bottom-4 right-0 p-2 sm:p-4 bg-accent text-accent-fg rounded-l-full font-extrabold tracking-widest font-heading">Home</Link>
     )
 }
 
@@ -28,7 +28,7 @@ function Intro() {
     const { summary, title } = favdexCaseStudy;
     return (
         <>
-            <h1 className="text-3xl font-extrabold sm:text-center text-page-fg">{title}</h1>
+            <h1 className="text-3xl font-heading font-extrabold sm:text-center text-page-fg">{title}</h1>
             <p className="text-lg font-light text-surface-fg">{summary}</p>
         </>
     )
@@ -40,7 +40,10 @@ function WhyIBuiltIt() {
         <section>
             <TerminalCircles />
             <div className="bg-surface p-4 rounded flex flex-col gap-2 text-surface-fg">
-                <h2 className="text-2xl text-page-fg font-bold">{study.whyIBuiltIt.heading}</h2>
+                <h2
+                    className="text-2xl text-page-fg font-bold font-heading">
+                    {study.whyIBuiltIt.heading}
+                </h2>
                 {study.whyIBuiltIt.body.map((paragraph, i) => (
                     <p key={i}>{paragraph}</p>
                 ))}
@@ -57,7 +60,7 @@ function KeyFeatures() {
     return (
         <div
             className="bg-surface-muted p-4 rounded-lg w-fit mt-5 border border-primary/30">
-            <h2 className="text-xl font-bold">--key-features</h2>
+            <h2 className="text-xl font-bold font-heading">--key-features</h2>
             <ul className="p-2">
                 {keyFeatures.map((feature, i) => (
                     <motion.li key={i}
@@ -78,7 +81,7 @@ function TechnicalDecisions() {
     const { technicalDecisions } = favdexCaseStudy
     return (
         <div className="bg-surface p-4 rounded flex flex-col gap-5">
-            <h2 className="text-2xl font-extrabold">--technical-decisions</h2>
+            <h2 className="text-2xl font-heading font-extrabold">--technical-decisions</h2>
             {technicalDecisions.map((section, i) => (
                 <motion.div
                     key={i}
@@ -99,7 +102,7 @@ function Reflection() {
     return (
         <div
             className="bg-surface-muted rounded p-4 text-surface-fg border-l-4 border-accent/70">
-            <h2 className="text-lg font-bold text-page-fg">{reflection.heading}</h2>
+            <h2 className="text-lg font-heading font-bold text-page-fg">{reflection.heading}</h2>
             {reflection.body}
         </div>
     )
@@ -107,7 +110,7 @@ function Reflection() {
 function Links() {
     const { links } = favdexCaseStudy;
     return (
-        <div className="flex gap-6 text-surface-fg">
+        <div className="flex gap-6 text-surface-fg font-heading">
             <a className="text-xl font-bold bg-surface-muted px-4 py-1 rounded-lg
                 hover:text-primary-fg hover:bg-primary/80"
                 href={links.sourceLink}

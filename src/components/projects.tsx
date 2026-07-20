@@ -5,10 +5,8 @@ export function Projects({ data }: { data: data_to_show }) {
     const { projects } = data;
     return (
         <main id="myworks" className="flex flex-col gap-4 mt-4">
-            <h3 className="text-2xl font-heading">What i've <span
-                className="uppercase font-extrabold gradient-text text-3xl tracking-widest">
-                Built
-            </span>
+            <h3 className="text-xl font-heading text-surface-fg">
+                <span className="text-success">bijay@codes:</span> ~$ sudo --list projects
             </h3>
             <div className="flex flex-wrap gap-6 sm:grid sm:grid-cols-2 max-w-350">
                 {
@@ -19,7 +17,7 @@ export function Projects({ data }: { data: data_to_show }) {
                     })
                 }
             </div>
-        </main>
+        </main >
     )
 }
 function Builds({ work, index }: { work: project_data; index: number }) {
@@ -28,7 +26,7 @@ function Builds({ work, index }: { work: project_data; index: number }) {
     return (
         // Parent
         <motion.section key={work.name}
-            className="bg-surface-muted first:col-span-2 rounded-2xl rounded-t-sm
+            className="bg-surface-muted/40 hover:outline hover:outline-primary/20 hover:bg-surface-muted/60 first:col-span-2 rounded-2xl rounded-t-sm
             grid"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -39,11 +37,10 @@ function Builds({ work, index }: { work: project_data; index: number }) {
             <TerminalCircles />
             <div className="p-4 flex flex-col gap-4 justify-center">
                 <div className="flex flex-1">
-                    <h4 className="text-xl text-surface-muted-fg font-heading">
+                    <h4 className="text-xl text-surface-fg font-heading font-extrabold">
                         $sudo --pitch {work.name}
                     </h4>
                     {/* three circles in each projects come from this */}
-
                 </div>
                 {/* details of projects- to edit go to portfolio-data/about-me file */}
                 <p className="text-md max-w-250">bash: {work.intro}</p>

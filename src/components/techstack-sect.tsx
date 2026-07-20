@@ -16,10 +16,10 @@ export function TechStack({ data }: { data: data_to_show }) {
                 {
                     techStack.map((tech, i) => {
                         return (
-                            <motion.div className="flex flex-col justify-center items-center w-16 hover:scale-110 transition-all duration-150 ease-in-out"
+                            <motion.div className="flex flex-col justify-center items-center w-16 hover:scale-110"
                                 initial={{ opacity: 0, x: -20 }}
                                 whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: false, amount: 0.1 }}
+                                viewport={{ once: true, amount: 0.1 }}
                                 transition={{ duration: 0.2, delay: delay + (i * gap), ease: 'easeIn' }}
                                 key={tech.label}>
                                 <img title={tech.title}
