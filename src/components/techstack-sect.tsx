@@ -16,7 +16,8 @@ export function TechStack({ data }: { data: data_to_show }) {
                 {
                     techStack.map((tech, i) => {
                         return (
-                            <motion.div className="flex flex-col justify-center items-center w-16 hover:scale-110"
+                            <motion.div className="flex flex-col justify-center items-center 
+                            w-16 hover:scale-110"
                                 initial={{ opacity: 0, x: -20 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true, amount: 0.1 }}
@@ -25,7 +26,8 @@ export function TechStack({ data }: { data: data_to_show }) {
                                 <img title={tech.title}
                                     loading="lazy"
                                     src={tech.logo} alt={tech.label}
-                                    className="w-12 aspect-square rounded-lg bg-surface-muted border border-accent/30 p-2"
+                                    className="w-12 aspect-square rounded-lg
+                                    bg-surface-muted border border-accent/30 p-2"
                                 />
                                 <span className="text-sm text-surface-muted-fg tracking-tighter leading-tight">{tech.label}</span>
                             </motion.div>

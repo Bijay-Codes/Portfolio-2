@@ -2,9 +2,14 @@ import { Link } from "react-router";
 import { favdexCaseStudy } from "../portfolio-data/casestudy";
 import { TerminalCircles } from "./projects";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 export function CaseStudyPage() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
     return (
-        <section className="text-page-fg max-w-300 m-auto flex flex-col items-center justify-center gap-5 sm:gap-10 p-4 sm:p-8 tracking-tight">
+        <section className="max-w-300 m-auto p-4 sm:p-8 tracking-tight text-page-fg
+        flex flex-col items-center justify-center gap-5 sm:gap-10">
             <HomeLink />
             <Intro />
             <WhyIBuiltIt />
@@ -20,7 +25,9 @@ function HomeLink() {
     return (
         <Link
             to='/'
-            className="fixed bottom-10 right-0 p-2 sm:p-4 bg-accent text-accent-fg rounded-l-full font-extrabold tracking-widest font-heading">Home</Link>
+            className="fixed bottom-10 right-0 p-2 sm:p-4 rounded-l-full
+            bg-accent text-accent-fg
+            font-extrabold tracking-widest font-heading">Home</Link>
     )
 }
 
@@ -39,7 +46,8 @@ function WhyIBuiltIt() {
     return (
         <section>
             <TerminalCircles />
-            <div className="bg-surface p-4 rounded flex flex-col gap-2 text-surface-fg">
+            <div className="bg-surface text-surface-fg
+            p-4 rounded flex flex-col gap-2 ">
                 <h2
                     className="text-2xl text-page-fg font-bold font-heading">
                     {study.whyIBuiltIt.heading}
@@ -59,7 +67,8 @@ function KeyFeatures() {
     const gap = 0.2;
     return (
         <div
-            className="bg-surface-muted p-4 rounded-lg w-fit mt-5 border border-primary/30">
+            className="bg-surface-muted border-primary/30
+            p-4 rounded-lg w-fit mt-5 border ">
             <h2 className="text-xl font-bold font-heading">--key-features</h2>
             <ul className="p-2">
                 {keyFeatures.map((feature, i) => (
@@ -101,7 +110,8 @@ function Reflection() {
     const { reflection } = favdexCaseStudy;
     return (
         <div
-            className="bg-surface-muted rounded p-4 text-surface-fg border-l-4 border-accent/70">
+            className=" rounded p-4  border-l-4
+            bg-surface-muted border-accent/70 text-surface-fg">
             <h2 className="text-lg font-heading font-bold text-page-fg">{reflection.heading}</h2>
             {reflection.body}
         </div>
@@ -111,15 +121,15 @@ function Links() {
     const { links } = favdexCaseStudy;
     return (
         <div className="flex gap-3 sm:gap-6 text-surface-fg font-heading">
-            <a className="sm:text-xl font-bold bg-surface-muted px-2 sm:px-4 py-1 rounded-lg
-                hover:text-primary-fg hover:bg-primary/80"
+            <a className="sm:text-xl font-bold  px-2 sm:px-4 py-1 rounded-lg
+                hover:text-primary-fg hover:bg-primary/80 bg-surface-muted"
                 href={links.sourceLink}
                 target="_blank"
                 rel="noreferrer">
                 Source code
             </a>
-            <a className="sm:text-xl font-bold bg-surface-muted px-2 sm:px-4 py-1 rounded-lg
-                hover:text-primary-fg hover:bg-primary/80"
+            <a className="sm:text-xl font-bold  px-2 sm:px-4 py-1 rounded-lg
+                hover:text-primary-fg hover:bg-primary/80 bg-surface-muted"
                 href={links.liveLink}
                 target="_blank"
                 rel="noreferrer">

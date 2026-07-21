@@ -20,15 +20,11 @@ export type socialData = {
     logo: string;
     link: string;
 }
-type imagesSRC = {
-    title: string;
-    src: string;
-}
+
 export interface data_to_show {
     aboutMe: {
         tagline: string;
     }
-    sliderImages: imagesSRC[]
     techStack: techdata[];
     projects: project_data[];
     social: {

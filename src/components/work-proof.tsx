@@ -25,7 +25,8 @@ function ProjectsLog() {
             whileInView={{ x: 0 }}
             viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.4, ease: 'easeIn' }}
-            className="h-full p-4 flex flex-col gap-2 text-surface-muted-fg bg-surface rounded-2xl">
+            className="h-full p-4 flex flex-col gap-2
+            text-surface-muted-fg bg-surface rounded-2xl">
             <span className="text-md sm:text-xl whitespace-nowrap">$recent-works --list</span>
             <div className="text-base sm:text-lg">projects/</div>
             <ol className="text-sm sm:text-base flex flex-col gap-3">

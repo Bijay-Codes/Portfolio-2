@@ -31,7 +31,7 @@ function Name() {
                 initial={{ inset: '0 0 0 0' }}
                 animate={{ inset: '0 100% 0 0' }}
                 transition={{ duration: 2, delay: delay }}
-                className="text-md text-surface-muted-fg pb-2">
+                className="text-md text-surface-muted-fg py-2 sm:text-md text-sm">
                 <span className="text-success font-heading tracking-wide">
                     bijay@codes:
                 </span>
@@ -39,7 +39,8 @@ function Name() {
             </motion.h1>
             <h2 className="text-lg sm:text-2xl font-heading tracking-widest">This is
                 <span
-                    className="text-xl sm:text-3xl bg-primary/80 border border-secondary border-r-6 text-primary-fg">
+                    className="text-xl sm:text-3xl border border-r-6
+                    bg-primary/80 border-secondary text-primary-fg">
                     &lt;
                     <span
                         className="font-extrabold tracking-widest">
@@ -77,11 +78,15 @@ function Links() {
         <div className="flex flex-wrap gap-2">
             <a
                 className={`bg-accent font-extrabold text-accent-fg
-                    hover:bg-accent/60 hover:drop-shadow-xl hover:drop-shadow-accent hover:outline-2 hover:outline-accent font-heading ${linksStyle}`}
+                    hover:bg-accent/60 hover:drop-shadow-xl
+                    hover:drop-shadow-accent hover:outline-2
+                    hover:outline-accent font-heading ${linksStyle}`}
                 href="#contacts">--contact</a>
             <a
                 className={`bg-primary text-primary-fg rounded-lg 
-                    hover:bg-primary/60 hover:outline hover:outline-primary hover:drop-shadow-xl hover:drop-shadow-secondary ${linksStyle}`}
+                    hover:bg-primary/60 hover:outline
+                    hover:outline-primary hover:drop-shadow-xl
+                    hover:drop-shadow-secondary ${linksStyle}`}
                 href="#myworks">--projects</a>
         </div>
     )
@@ -93,9 +98,12 @@ function CircleBadges() {
         <div className="flex gap-2 lg:gap-3 justify-end
          absolute top-0 right-0 p-1 sm:p-2
           bg-surface-muted/80 border-b border-primary/20 w-full">
-            <div className={`bg-success/60 hover:bg-success ${circle_class}`}></div>
-            <div className={`bg-warning/60 hover:bg-warning ${circle_class}`}></div>
-            <div className={`bg-danger/60 hover:bg-danger ${circle_class}`}></div>
+            <div className={`bg-success/60 hover:bg-success
+                 ${circle_class}`}></div>
+            <div className={`bg-warning/60 hover:bg-warning 
+                ${circle_class}`}></div>
+            <div className={`bg-danger/60 hover:bg-danger 
+                ${circle_class}`}></div>
         </div>
     )
 }

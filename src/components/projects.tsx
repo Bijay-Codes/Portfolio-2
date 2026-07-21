@@ -26,8 +26,9 @@ function Builds({ work, index }: { work: project_data; index: number }) {
     return (
         // Parent
         <motion.section key={work.name}
-            className="bg-surface-muted/40 hover:outline hover:outline-primary/20 hover:bg-surface-muted/60 first:col-span-2 rounded-2xl rounded-t-sm
-            grid"
+            className="bg-surface-muted/40 hover:outline
+             hover:outline-primary/20 hover:bg-surface-muted/60
+              first:col-span-2 rounded-2xl rounded-t-sm grid"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.1 }}
@@ -37,13 +38,13 @@ function Builds({ work, index }: { work: project_data; index: number }) {
             <TerminalCircles />
             <div className="p-4 flex flex-col gap-4 justify-center">
                 <div className="flex flex-1">
-                    <h4 className="text-xl text-surface-fg font-heading font-extrabold">
+                    <h4 className="text-lg tsm:text-xl text-surface-fg font-heading font-extrabold">
                         $sudo --pitch {work.name}
                     </h4>
                     {/* three circles in each projects come from this */}
                 </div>
                 {/* details of projects- to edit go to portfolio-data/about-me file */}
-                <p className="text-md max-w-250">bash: {work.intro}</p>
+                <p className="text-sm sm:text-md max-w-250">bash: {work.intro}</p>
 
                 {/* time taken to build project */}
                 <span className="text-surface-muted-fg">
@@ -94,10 +95,12 @@ function TechUsed({ work }: { work: project_data }) {
 export function TerminalCircles() {
     const three_dots = 'w-4 h-4 rounded-full';
     return (
-        <div className="ml-auto flex gap-2 opacity-70 justify-end h-8 items-center px-4 bg-primary/30 w-full">
-            <span className={`${three_dots} bg-success`}></span>
-            <span className={`${three_dots} bg-warning`}></span>
-            <span className={`${three_dots} bg-danger`}></span>
+        <div className="ml-auto rounded opacity-70 h-8 px-4 w-full
+        flex gap-2 justify-end items-center
+         bg-primary/30 hover:bg-primary/10 ">
+            <span className={`${three_dots} bg-success/70 hover:bg-success`}></span>
+            <span className={`${three_dots} bg-warning/70 hover:bg-warning`}></span>
+            <span className={`${three_dots} bg-danger/70 hover:bg-danger`}></span>
         </div>
     )
 }
@@ -106,9 +109,10 @@ function Links({ work }: { work: project_data }) {
     return (
         <div className="flex gap-2 sm:gap-6 items-center flex-wrap">
             <a
-                className="py-1 px-4 bg-accent text-accent-fg rounded
-                 hover:bg-accent/60 hover:drop-shadow-xl hover:drop-shadow-accent
-                 hover:outline-2 hover:outline-accent"
+                className="py-1 px-4  rounded
+                bg-accent text-accent-fg
+                hover:bg-accent/60 hover:drop-shadow-xl hover:drop-shadow-accent
+                  hover:outline-2 hover:outline-accent"
                 href={work.links.liveLink}
                 target="_blank">Live demo</a>
             <a className="py-1 px-4 bg-primary  text-primary-fg rounded-lg
@@ -123,8 +127,8 @@ function Links({ work }: { work: project_data }) {
 function KeyFeatures({ features }: { features: string[] }) {
     return (
         <section>
-            <h2>--key-points:</h2>
-            <ul className="text-surface-muted-fg hover:text-surface-fg ">
+            <h2 className="text-surface-fg">--key-points:</h2>
+            <ul className="text-surface-muted-fg hover:text-surface-fg">
                 {features.map((feat: string, i: number) => {
                     return <li className="m-2 text-sm marker:content-['$_']"
                         key={i}>

@@ -4,13 +4,6 @@ export const dataToShow = {
     aboutMe: {
         tagline: `Self-taught frontend developer, Always working on a new project. Deployed 3 projects`,
     },
-    sliderImages: [
-        { title: 'Modal of a pokemon in Favdex', src: 'favdex-mod.webp' },
-        { title: 'Favdex page', src: 'favourite.webp' },
-        { title: 'FaunaUI homepage', src: 'fauna-home.webp' },
-        { title: 'FaunaUI theme page', src: 'fauna.webp' },
-        { title: 'Tracktalk form', src: 'track-talk.webp' }
-    ],
     techStack: [
         TECH_DATA.html, TECH_DATA.css,
         TECH_DATA.js, TECH_DATA.react,
