@@ -51,7 +51,7 @@ export function Footer({ data }: { data: data_to_show }) {
 export function FooterCat() {
     const [clicked, setClicked] = useState(false);
     return (
-        <div className="absolute -top-12 right-1/3 flex flex-col items-center">
+        <div className="absolute -top-12 right-0 sm:right-1/3 flex flex-col items-center">
             <motion.svg
                 viewBox="0 0 413.928 413.928"
                 className="w-15 h-15 cursor-pointer text-surface-muted-fg"

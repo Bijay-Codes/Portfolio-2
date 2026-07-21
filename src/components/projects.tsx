@@ -4,9 +4,9 @@ import { Link } from "react-router";
 export function Projects({ data }: { data: data_to_show }) {
     const { projects } = data;
     return (
-        <main id="myworks" className="flex flex-col gap-4 mt-4">
+        <main id="myworks" className="flex flex-col gap-4">
             <h3 className="text-xl font-heading text-surface-fg">
-                <span className="text-success">bijay@codes:</span> ~$ sudo --list projects
+                --projects
             </h3>
             <div className="flex flex-wrap gap-6 sm:grid sm:grid-cols-2 max-w-350">
                 {
@@ -54,10 +54,11 @@ function Builds({ work, index }: { work: project_data; index: number }) {
                 <KeyFeatures features={work.keyPoints} />
                 <TechUsed work={work} />
                 {/* Live demo and github link comes from this */}
-                <div className="flex gap-4">
+                <div className="flex flex-wrap gap-4">
                     <Links work={work} />
                     {work.name === 'Favdex' &&
-                        <Link to='/casestudy' className="text-lg py-1 px-4 rounded-lg w-fit font-bold border
+                        <Link to='/casestudy'
+                            className="text-lg py-1 px-4 rounded-lg w-fit font-bold border
                         bg-surface border-accent/60
                         hover:border-accent hover:drop-shadow-xl hover:drop-shadow-accent
                         hover:bg-accent/30 hover:text-accent-fg active:bg-accent">
@@ -103,7 +104,7 @@ export function TerminalCircles() {
 
 function Links({ work }: { work: project_data }) {
     return (
-        <div className="flex gap-6 items-center">
+        <div className="flex gap-2 sm:gap-6 items-center flex-wrap">
             <a
                 className="py-1 px-4 bg-accent text-accent-fg rounded
                  hover:bg-accent/60 hover:drop-shadow-xl hover:drop-shadow-accent

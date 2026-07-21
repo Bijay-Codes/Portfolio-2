@@ -20,7 +20,7 @@ function HomeLink() {
     return (
         <Link
             to='/'
-            className="fixed bottom-4 right-0 p-2 sm:p-4 bg-accent text-accent-fg rounded-l-full font-extrabold tracking-widest font-heading">Home</Link>
+            className="fixed bottom-10 right-0 p-2 sm:p-4 bg-accent text-accent-fg rounded-l-full font-extrabold tracking-widest font-heading">Home</Link>
     )
 }
 
@@ -110,15 +110,15 @@ function Reflection() {
 function Links() {
     const { links } = favdexCaseStudy;
     return (
-        <div className="flex gap-6 text-surface-fg font-heading">
-            <a className="text-xl font-bold bg-surface-muted px-4 py-1 rounded-lg
+        <div className="flex gap-3 sm:gap-6 text-surface-fg font-heading">
+            <a className="sm:text-xl font-bold bg-surface-muted px-2 sm:px-4 py-1 rounded-lg
                 hover:text-primary-fg hover:bg-primary/80"
                 href={links.sourceLink}
                 target="_blank"
                 rel="noreferrer">
                 Source code
             </a>
-            <a className="text-xl font-bold bg-surface-muted px-4 py-1 rounded-lg
+            <a className="sm:text-xl font-bold bg-surface-muted px-2 sm:px-4 py-1 rounded-lg
                 hover:text-primary-fg hover:bg-primary/80"
                 href={links.liveLink}
                 target="_blank"

@@ -11,7 +11,7 @@ export function Hero({ data }: { data: data_to_show }) {
                 transition={{ delay: duration * 1.5, duration: 0.4, ease: 'easeIn' }}
                 className="flex flex-col sm:grid grid-cols-[1fr_auto] sm:items-end
             bg-surface border-surface-fg relative gap-6
-            py-10 px-6 rounded-lg w-full max-w-350">
+            py-4 px-4 sm:py-10 sm:px-6 rounded-lg w-full max-w-350">
                 <div>
                     <CircleBadges />
                     <Name />
@@ -37,9 +37,9 @@ function Name() {
                 </span>
                 ~$ whoami
             </motion.h1>
-            <h2 className="text-2xl font-heading tracking-widest">This is
+            <h2 className="text-lg sm:text-2xl font-heading tracking-widest">This is
                 <span
-                    className="text-3xl bg-primary/80 border border-secondary border-r-6 text-primary-fg">
+                    className="text-xl sm:text-3xl bg-primary/80 border border-secondary border-r-6 text-primary-fg">
                     &lt;
                     <span
                         className="font-extrabold tracking-widest">
@@ -59,7 +59,9 @@ interface tagline {
 function Tagline({ aboutMe }: tagline) {
     return (
         <>
-            <h3 className="text-lg py-2 text-surface-fg font-heading">{aboutMe.tagline}</h3>
+            <h3 className="text-md sm:text-lg py-2 text-surface-fg font-heading">
+                {aboutMe.tagline}
+            </h3>
             <h4 className="text-surface-muted-fg text-sm">
                 $echo --status: <span className="uppercase text-surface-fg">
                     open to work
@@ -70,9 +72,9 @@ function Tagline({ aboutMe }: tagline) {
 }
 
 function Links() {
-    const linksStyle = 'font-extrabold py-2 px-2 sm:py-3 sm:px-6 rounded m-2';
+    const linksStyle = 'font-extrabold py-1 px-2 sm:py-3 sm:px-6 rounded';
     return (
-        <div>
+        <div className="flex flex-wrap gap-2">
             <a
                 className={`bg-accent font-extrabold text-accent-fg
                     hover:bg-accent/60 hover:drop-shadow-xl hover:drop-shadow-accent hover:outline-2 hover:outline-accent font-heading ${linksStyle}`}
